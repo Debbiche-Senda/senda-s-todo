@@ -74,7 +74,7 @@ const CreateTodoModal = ({ open, setOpen, addTodo }) => {
             onChange={(e) => setTask(e.target.value)}
             aria-label="minimum height"
             minRows={3}
-            placeholder="Minimum 3 rows"
+            placeholder="Message"
             style={{ width: 200 }}
           />
           <div className="flex justify-between">
