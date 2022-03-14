@@ -54,7 +54,7 @@ function App() {
         <h1> Senda's Todo </h1>
         {isConnected ? (
           <div className="flex">
-            <p>{user.userName}</p>
+            <p>{user}</p>
             <button
               className="border border-pink-400 text-center text-lg w-20 mr-20"
               onClick={() => {
