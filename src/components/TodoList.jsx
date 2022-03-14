@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-const TodoList = ({ todos, setOpen, setTodos }) => {
+const TodoList = ({ todos, setOpen, setTodos, isConnected }) => {
   const handleCheck = async (todo) => {
     try {
       await axios.patch('/api/edit/' + todo._id, { isCompleted: !todo.isCompleted });
@@ -35,6 +35,7 @@ const TodoList = ({ todos, setOpen, setTodos }) => {
               <Checkbox
                 // className="border border-pink-500 rounded"
                 {...label}
+                disabled={!isConnected}
                 onChange={() => handleCheck(todo)}
                 checked={todo.isCompleted}
               />

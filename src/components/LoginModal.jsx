@@ -14,7 +14,7 @@ const style = {
   p: 4
 };
 
-const LoginModal = ({ open, setOpen }) => {
+const LoginModal = ({ open, setOpen, setIsConnected }) => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
 
@@ -22,6 +22,7 @@ const LoginModal = ({ open, setOpen }) => {
     try {
       const res = await axios.post('/api/login', { email, password });
       localStorage.setItem('token', res.data.token);
+      setIsConnected(true);
       console.log('token', res.data.token);
       setOpen(false);
     } catch (error) {
