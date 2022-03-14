@@ -20,7 +20,7 @@ const LoginModal = ({ open, setOpen }) => {
 
   const login = async () => {
     try {
-      const res = await axios.post('/login', { email, password });
+      const res = await axios.post('/api/login', { email, password });
       localStorage.setItem('token', res.data.token);
       console.log('token', res.data.token);
       setOpen(false);

@@ -21,7 +21,7 @@ const RegisterModal = ({ open, setOpen, setOpenLogin }) => {
 
   const createUser = async () => {
     try {
-      await axios.post('/register', { userName, email, password });
+      await axios.post('/api/register', { userName, email, password });
 
       setOpen(false);
       setOpenLogin(true);

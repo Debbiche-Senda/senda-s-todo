@@ -27,7 +27,7 @@ const CreateTodoModal = ({ open, setOpen, addTodo }) => {
 
     try {
       setLoading(true);
-      const response = await axios.post('/todo', { firstName, lastName, email, task });
+      const response = await axios.post('/api/todo', { firstName, lastName, email, task });
       const newTodo = response.data;
       addTodo(newTodo);
       setOpen(false);

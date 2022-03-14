@@ -8,7 +8,7 @@ const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 const TodoList = ({ todos, setOpen, setTodos }) => {
   const handleCheck = async (todo) => {
     try {
-      await axios.patch('/edit/' + todo._id, { isCompleted: !todo.isCompleted });
+      await axios.patch('/api/edit/' + todo._id, { isCompleted: !todo.isCompleted });
       const data = [...todos];
       const index = data.findIndex((e) => e._id === todo._id);
       data[index].isCompleted = !todo.isCompleted;

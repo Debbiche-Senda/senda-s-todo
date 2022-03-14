@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('/todo')
+      .get('/api/todo')
       .then((response) => {
         setTodos(response.data);
       })
