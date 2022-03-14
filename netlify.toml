@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/api/"
+  from = "/api/*"
   to="https://senda-todo.herokuapp.com/api/:splat"
   status = 200
 
